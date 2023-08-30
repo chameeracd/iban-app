@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import axios from '../axios';
 import {useAuth} from '../contexts/AuthContext';
+import logo from '../assets/react.svg';
 
 export default function Register() {
     const {setUser} = useAuth();
@@ -54,10 +55,10 @@ export default function Register() {
                     className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                     <img
                         className="w-8 h-8 mr-2"
-                        src="https://dcodemania.com/img/logo.svg"
+                        src={logo}
                         alt="logo"
                     />
-                    DCodemania
+                    IBAN App
                 </a>
                 <div
                     className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">

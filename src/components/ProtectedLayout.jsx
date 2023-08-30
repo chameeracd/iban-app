@@ -3,6 +3,7 @@ import {Navigate, Outlet} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import axios from '../axios';
 import {useAuth} from '../contexts/AuthContext';
+import logo from '../assets/react.svg';
 
 export default function DefaultLayout() {
     const {user, setUser} = useAuth();
@@ -47,12 +48,12 @@ export default function DefaultLayout() {
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <a href="https://dcodemania.com/" className="flex items-center">
                         <img
-                            src="https://dcodemania.com/img/logo.svg"
+                            src={logo}
                             className="h-6 mr-3 sm:h-9"
                             alt="DCodeMania Logo"
                         />
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-							DCodeMania
+							IBAN App
 						</span>
                     </a>
                     <button

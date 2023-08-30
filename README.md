@@ -1,8 +1,22 @@
-# React + Vite
+# React + Vite - IBAN APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Laravel 10 React app for IBAN Validation
 
-Currently, two official plugins are available:
+## setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone git@github.com:chameeracd/iban-app.git
+cd iban-app
+npm install
+cd api
+composer update
+```
+create ``.env`` file in api dir and configure it
+
+run ``php artisan migrate`` inside api dir
+
+create ``.env`` file in root and set ``VITE_BASE_API_URL=http://localhost:8000/api``
+
+from root : ``npm run start``
+
+application will be loaded on ``http://localhost:3000/``

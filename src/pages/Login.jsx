@@ -24,7 +24,7 @@ export default function Login() {
                 return <Navigate to="/profile" />;
             }
         } catch (error) {
-            if (error.response.status === 401) {
+            if (error.response.status === 401 || error.response.status === 422) {
                 setError(error.response.data.message);
             }
         }
