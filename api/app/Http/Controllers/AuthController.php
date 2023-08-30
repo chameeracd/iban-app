@@ -16,11 +16,12 @@ class AuthController extends Controller
     {
         $data = $request->validated();
 
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        $user = new User();
+        $user->password = Hash::make($data['password']);
+        $user->email = $data['email'];
+        $user->name = $data['name'];
+        $user->assignRole('user');
+        $user->save();
 
         $token = $user->createToken('auth_token')->plainTextToken;
         $cookie = cookie('token', $token, 60 * 24); // 1 day

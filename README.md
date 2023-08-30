@@ -13,7 +13,12 @@ composer update
 ```
 create ``.env`` file in api dir and configure it
 
-run ``php artisan migrate`` inside api dir
+run;
+```
+php artisan migrate
+php artisan db:seed
+```
+inside api dir
 
 run ``php artisan app:create-admin 111111`` inside api dir (this will create the admin user admin@example.com with password '111111' )
 
