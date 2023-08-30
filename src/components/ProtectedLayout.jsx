@@ -50,7 +50,7 @@ export default function DefaultLayout() {
                         <img
                             src={logo}
                             className="h-6 mr-3 sm:h-9"
-                            alt="DCodeMania Logo"
+                            alt="logo"
                         />
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
 							IBAN App
@@ -79,24 +79,13 @@ export default function DefaultLayout() {
                         <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
                                 <NavLink
-                                    to="/profile"
+                                    to="/dashboard"
                                     className={({isActive}) =>
                                         isActive
                                             ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white'
                                             : 'block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 dark:text-gray-400 md:dark:hover:text-white'
                                     }>
-                                    Profile
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/about"
-                                    className={({isActive}) =>
-                                        isActive
-                                            ? 'block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white'
-                                            : 'block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 dark:text-gray-400 md:dark:hover:text-white'
-                                    }>
-                                    About
+                                    Dashboard
                                 </NavLink>
                             </li>
 
@@ -112,7 +101,7 @@ export default function DefaultLayout() {
                     </div>
                 </div>
             </nav>
-            <main className="container flex justify-center flex-col items-center mt-10">
+            <main className="container mx-auto flex justify-center flex-col items-center">
                 <Outlet/>
             </main>
         </>
