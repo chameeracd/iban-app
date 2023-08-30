@@ -2,7 +2,7 @@
 
 Laravel 10 React app for IBAN Validation
 
-## setup
+## Setup
 
 ```
 git clone git@github.com:chameeracd/iban-app.git
@@ -27,3 +27,9 @@ create ``.env`` file in root and set ``VITE_BASE_API_URL=http://localhost:8000/a
 from root : ``npm run start``
 
 application will be loaded on ``http://localhost:3000/``
+
+## Unit Test
+
+```
+cd iban-app/api
+php artisan test
