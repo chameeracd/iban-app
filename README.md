@@ -10,7 +10,6 @@ cd iban-app
 npm install
 cd api
 composer update
-composer install
 composer run-script post-root-package-install
 php artisan key:generate
 ```
@@ -36,3 +35,10 @@ application will be loaded on ``http://localhost:3000/``
 ```
 cd iban-app/api
 php artisan test
+```
+
+## Design Diagram
+![design](design-diagram.png "design")
+
+## DB Diagram
+![db](db-diagram.png "db")
