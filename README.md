@@ -10,6 +10,9 @@ cd iban-app
 npm install
 cd api
 composer update
+composer install
+composer run-script post-root-package-install
+php artisan key:generate
 ```
 update ``.env`` file in api dir and configure db credentials
 
