@@ -27,6 +27,6 @@ class IbanController extends Controller
      */
     public function index()
     {
-        return Iban::paginate(2);
+        return Iban::with('creator')->paginate(env('RECORDS_PER_PAGE', 10));
     }
 }

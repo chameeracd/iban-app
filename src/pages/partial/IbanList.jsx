@@ -15,6 +15,7 @@ export default function IbanList() {
         try {
             const response = await axios.get(`/iban?page=${page}`);
             setIbans(response.data);
+            console.log(response.data)
         } catch (error) {
             console.log(error);
         }
@@ -60,18 +61,18 @@ export default function IbanList() {
                 <tr>
                     <th>ID</th>
                     <th>IBAN No:</th>
-                    <th>User ID</th>
+                    <th>User</th>
                     <th>Created At</th>
                 </tr>
                 </thead>
                 <tbody>
                 {
-                    ibans.data?.map(iban => (
-                        <tr key={iban.id}>
+                    ibans.data?.map((iban, index) => (
+                        <tr key={index}>
                             <td align='center'>{iban.id}</td>
                             <td align='center'>{iban.number}</td>
-                            <td align='center'>{iban.created_by}</td>
-                            <td align='center'>{moment(iban.created_at).format('YYYY-MM-DD, h:mm a')}</td>
+                            <td align='center'>{iban.creator?iban.creator.name:'-'}</td>
+                            <td align='center'>{iban.created_at?moment(iban.created_at).format('YYYY-MM-DD h:mm a'):'-'}</td>
                         </tr>
                     ))
                 }
