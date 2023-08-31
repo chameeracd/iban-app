@@ -11,7 +11,7 @@ npm install
 cd api
 composer update
 ```
-create ``.env`` file in api dir and configure it
+update ``.env`` file in api dir and configure db credentials
 
 run;
 ```
