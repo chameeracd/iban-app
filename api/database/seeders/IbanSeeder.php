@@ -16,11 +16,11 @@ class IbanSeeder extends Seeder
     public function run(): void
     {
         $user = new User();
-//        $user->password = Hash::make('Hbwqej@65');
-//        $user->email = 'demo@example.com';
-//        $user->name = 'Demo';
-//        $user->assignRole('user');
-//        $user->save();
+        $user->password = Hash::make('Hbwqej@65');
+        $user->email = 'demo@example.com';
+        $user->name = 'Demo';
+        $user->assignRole('user');
+        $user->save();
         $user->id = 1;
 
         $ibans = [
