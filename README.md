@@ -25,7 +25,7 @@ inside api dir
 
 run ``php artisan app:create-admin 111111`` inside api dir (this will create the admin user admin@example.com with password '111111' )
 
-create ``.env`` file in root and set ``VITE_BASE_API_URL=http://localhost:8000/api``
+create ``.env`` file in root and set ``VITE_BASE_API_URL=http://localhost:8000/``
 
 from root : ``npm run start``
 
